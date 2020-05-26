@@ -52,11 +52,16 @@ function validateForm(e) {
     return true;
 }
 
+
+https://drive.google.com/file/d/1Vkyg3z0hnUHzVRNlEV07GucyZVM037WB/view?usp=sharing
+
+
+
 function makeEmptyCard(){
     const card = {
         cardDiv : makeEl('div', 'card mt-4  card-horizontal'),
         img: makeEl('img', 'card-img-top'),
-        imgSrc: 'img/ghandi.jpg',
+        imgSrc: 'https://drive.google.com/thumbnail?id=1Vkyg3z0hnUHzVRNlEV07GucyZVM037WB',
         cardBodyDiv: makeEl('div', 'card-body'),
         title: makeEl('h4', 'card-title'),
         p1: makeEl('p', 'card-text'),
