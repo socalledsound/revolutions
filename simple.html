@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- let's use bootstrap why don't we? here i'll use a cdn so this page is portable -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+    
+    <style>
+        body, html {
+            background-image: linear-gradient(to bottom,  #f0bac2, rgb(184, 117, 93));
+            background-repeat: no-repeat;
+            height: 100%;
+            background-size: cover;
+        }
+        /* add a little padding to the jumbo */
+        .jumbotron {
+            background-image: linear-gradient(to left bottom, rgb(197, 122, 197), rgb(189, 138, 119), rgb(189, 138, 119));
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 3rem;
+            color:rgb(71, 33, 19);
+            font-size: 30px;
+        }
+
+        .container {
+           /* background-color: #b3f255; 
+           font-size: 30px;
+            padding: 12px;
+           border-radius: 12px;
+           border: 1px solid white;
+            box-shadow: black; */
+        }
+
+
+    </style>
+    
+    <title>revolutionaries</title>
+</head>
+<body>
+    <!-- always nice to have a jumbotron -->
+    <div class="jumbotron jumbotron-fluid bg-danger">
+        <div class="container">
+          <h4 class="display-5">the revolution will not be televised</h4>
+          <p class="lead">but it will probably be on the internet
+          </p>
+        </div>
+      </div>
+
+      <!-- a container with a really simple form inside it  -->
+      <div class="container" id='target-container'>
+          
+        <!-- the form needs to have an id so we can target it -->
+        <form action="" id="myForm">
+            <!-- let's use an input group to make it nice and shiny and the code clean -->
+          <div class="input-group col-sm-8">           
+                    <!-- the input field needs to have an id so we can get the info -->
+                    <input type="text" class="form-control" id="name" placeholder="your name">
+                    <div class="input-group-append">
+                        <!-- a button of type submit -->
+                        <button class="btn btn-warning" type="submit">join</button>
+                    </div>
+
+
+                 
+          </div>
+        </form>
+      </div>
+
+
+
+<script>
+//get the form from the dom
+const form = document.querySelector("#myForm");
+//add an event listener of type submit, we'll call the function below
+form.addEventListener('submit', validateForm);
+
+
+function validateForm(e) {
+    //here we stop the browser from reloading on submit, this let's us post the data back to the page
+    e.preventDefault();
+    // let's grab a value from the id of our input in our form
+    const name = document.forms["myForm"]["name"].value;
+    //log it out just to test if it's working
+    console.log(name)
+
+    //let's make sure that name has a value and if not, post an alert
+      if ( name === "") {
+        alert(name + " can not be empty");
+        return false;
+      } else {
+          //let's call another function to print the name adn pass the name in
+        printName(name);
+        return true;
+      }
+
+}
+
+
+//this is all pretty self explanatory i think if you understand dom manipulation.
+//note that we can create bootstrap elements from within javascript!
+//we find out container and add a new div to it with a p element that has a message.
+function printName(name){
+    const container = document.querySelector('#target-container');    
+    const newDiv = document.createElement('div');
+    newDiv.className = 'row mt-4 ml-1';
+    const nameOutput = document.createElement('p');
+    nameOutput.innerText = `welcome to the revolution, ${name}`;
+    nameOutput.style.fontSize = '60px';
+    nameOutput.style.color = 'white'
+    //let's remove the form before we add our new text to the DOM
+    container.removeChild(form);
+    container.appendChild(newDiv);
+    newDiv.appendChild(nameOutput);
+    console.log(container);''
+}
+ 
+</script>
+
+
+</body>
+</html>

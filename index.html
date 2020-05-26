@@ -5,34 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="node_modules/p5/lib/p5.js"></script>
-    
-    <style>
+
+   
+   <style>
         body, html {
-            background-color: black;
+            background-image: linear-gradient(to bottom,  #f0bac2, rgb(184, 117, 93));
+            background: linear-gradient(180deg, rgba(165,228,67,1) 0%, rgba(236,233,22,1) 41%, rgba(255,67,0,1) 100%);
+            
+           background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+        /* add a little padding to the jumbo */
+        .jumbotron {
+            background-image: linear-gradient(to left bottom, rgb(197, 122, 197), rgb(189, 138, 119), rgb(189, 138, 119));
+            background: linear-gradient(0deg, rgba(165,228,67,1) 0%, rgba(236,233,22,1) 41%, rgba(255,67,0,1) 100%);
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 1rem;
+            color:rgb(71, 33, 19);
+            font-size: 30px;
         }
 
-        .jumbotron {
-            padding: 1rem;
+        /* #target-container {
+            background-image: linear-gradient(to bottom,  #f0bac2, rgb(184, 117, 93));
+            background-repeat: no-repeat;
+            height: 100%;
+            background-size: cover;
+        } */
+
+        img {
+            width: 200px;
         }
+        .card {
+            width:600px;
+        }
+        /* .card-horizontal {
+         display: flex;
+          flex: 1 1 auto;
+        } */
+
     </style>
+    
+
     
     <title>revolutionaries</title>
 </head>
 <body>
     
-    <div class="jumbotron jumbotron-fluid bg-danger">
-        <div class="container text-white">
-          <h4 class="display-5">the revolution will not be televised</h4>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-black">
+          <h4 class="display-2">the revolution will not be televised</h4>
           <p class="lead">but it will probably be on the internet
           </p>
         </div>
       </div>
 
-      <!-- <div class="container" id="mainRow">
-          <div class="row" >
-
+      <div class="container" id='target-container'>
+        <form action="" id="myForm">    
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="please enter your name">  
+                </div> 
+                <div class="form-group">
+                    <input type="text" class="form-control" id="chips" placeholder="from 1 to 10 how much do you like chips?">    
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="vision" placeholder="from 1 to 100 how good is your vision?">    
+                </div>
+                <div class="form-group">
+                    <!-- <input type="text" class="form-control" placeholder="your name"> -->
+                    <button class="btn btn-outline-dark form-control btn-lg" type="submit">join</button>
+                </div>
+           
+           
           </div>
-      </div> -->
+        </form>
+      </div>
 
 
       <script src="js/Revolutionary.js"></script>

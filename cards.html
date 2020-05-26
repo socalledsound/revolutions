@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/p5/lib/p5.js"></script>
+    
+    <style>
+        body, html {
+            background-color: black;
+            /* background: linear-gradient(90deg, rgba(165,228,67,1) 0%, rgba(236,233,22,1) 99%, rgb(13, 85, 3) 100%); */
+            background-color:  rgba(165,228,67,1);
+            /* background-repeat: no-repeat; */
+             /* height: 100%; */
+             /* width: 100%;
+             background-size: cover; */
+        }
+
+        .jumbotron {
+            background: linear-gradient(180deg, rgba(225,228,67,1) 0%, rgba(136,60,22,1) 81%, rgba(200,67,0,1) 100%);
+           
+            padding: 1rem;
+        }
+
+        .card {
+            background-color: rgb(232, 139, 40);
+            margin-left: 1rem;
+            width:300px;
+            border: 6px solid rgb(58, 14, 14);
+            border-radius: 12px;
+            box-shadow: 1px 2px grey;
+        }
+
+        .dates {
+            background-color: rgb(53, 11, 11);
+            font-size: 16px;
+            border: 3px solid rgb(53, 11, 11);
+            border-radius: 45px;
+        }
+
+        img {
+            border: 20px solid rgb(67, 25, 25);
+            /* border-radius:6px; */
+        }
+    </style>
+    
+    <title>revolutionaries</title>
+</head>
+<body>
+    
+    <div class="jumbotron jumbotron-fluid bg-danger">
+        <div class="container text-white">
+          <h4 class="display-5">the revolution will not be televised</h4>
+          <p class="lead">but it will probably be on the internet
+          </p>
+        </div>
+      </div>
+
+      <div class="container" id='target-container'>
+
+      </div>
+
+
+<script src="js/Revolutionary.js"></script>
+<script src="js/index2.js"></script>
+</body>
+</html>
